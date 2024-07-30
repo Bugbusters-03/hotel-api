@@ -13,3 +13,21 @@
         -> conflict varsa, onu coz daha sonra pull requesti olustur.
 
     3- conflictleri cozduketen sonra pull requesti github uzerinden olusturuyoruz
+
+
+
+    `git fetch -p`                    => clouddaki guncel branchlerio ceker
+    `git branch -d initial-files`     => localdeki branchleri siler
+    `git checkout <branchName>`       => bir branche gecmek
+
+
+    - takslarimiz
+        - model
+        - controller
+        - router
+        - dbConnection
+
+    Beyza   - user         -> model,controller,router
+    Soner   - reservation  -> model,controller,router
+    Omer    - room         -> model,controller,router
+    ibrahim - authentication,login,logout,token ve tablosu,
