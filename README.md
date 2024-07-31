@@ -5,12 +5,16 @@
         * bunun kesinlikle dev branchinden olusturulmasi gerekiyor
         * dev herzaman guncel oldugundan baska yerden acilan branch ile guncel degisiklikler gorulemez
     
-    -  oncelikle dev branchine gecmek lazim `git checkout dev`
-        - ! sonra  pull req yapmadan once - `git merge <kendiBranchIsmimiz>`
-        - sonra kendi branchimizi dev branchine localimizde merge ediyoruz
-        - sebebi asil merge i yapmadan once localimizde bizim branch ile dev branchi arasinda conflict varmi diye bakmak.
-        - yani kendimiz conflict varmi diye baktik (dev branchine gectik, localde kendi branchimizi ona merge ettik )
-        - conflict varsa, onu coz daha sonra pull requesti olustur.
+    
+    <!-- -  oncelikle dev branchine gecmek lazim `git checkout dev` -->
+        1 - öncelikle değişiklikleri ya push layın ya da stash yapın.
+        2 - dev branchına geçip git pull yapın
+        3 - daha sonra kendi branchınıza geçin
+        4 - ! sonra  pull req yapmadan once - `git merge dev`
+        5 - sonra kendi branchimizi dev branchine localimizde merge ediyoruz
+        6 - sebebi asil merge i yapmadan once localimizde bizim branch ile dev branchi arasinda conflict varmi diye bakmak.
+        7 - yani kendimiz conflict varmi diye baktik (dev branchine gectik, localde kendi branchimizi ona merge ettik )
+        8 - conflict varsa, onu coz daha sonra pull requesti olustur.
 
     - conflictleri cozduketen sonra pull requesti github uzerinden olusturuyoruz
 
