@@ -20,9 +20,9 @@ require('./src/config/dbConnection')()
 
 
 /* --------------------------------- routes --------------------------------- */
-// app.use('/',(req,res)=>{
-//     res.send('Welcome to hotel api!')
-// })
+app.all('/',(req,res)=>{
+    res.send('Welcome to hotel api!')
+})
 
 
 app.use('/users', require('./src/routes/userRouter'))

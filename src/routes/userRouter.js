@@ -4,7 +4,7 @@
 /* -------------------------------------------------------------------------- */
 
 const router = require('express').Router()
-const user = require('../controllers/userController')
+const {user} = require('../controllers/userController')
 
 router.route('/')
     .get(user.list)
