@@ -7,8 +7,8 @@ const mongoose = require('mongoose')
 
 module.exports = () => {
 
-    mongoose.connect(process.env?.MONGODB || 'mongodb+srv://edabeyzaozeren:XGNULWMGgB6JaEpg@cluster0.15it6c7.mongodb.net/HotelAPI')
-        .then(() => console.log('** DB Connected. **'))
-        .catch(() => console.log('-- DB Not Connected. --'))
+    mongoose.connect(process.env?.MONGODB )
+        .then((connect) => console.log('** DB Connected. **',connect.connection.host,connect.connection.name))
+        .catch((err) => console.log('-- DB Not Connected. --',err))
 
 }

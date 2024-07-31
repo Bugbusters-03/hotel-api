@@ -11,8 +11,6 @@ const app  = express();
 
 
 app.use(express.json())
-console.log('ddd');
-console.log('dev update');
 /* -------------------------- express-async-errors -------------------------- */
 require('express-async-errors')
 
@@ -22,12 +20,19 @@ require('./src/config/dbConnection')()
 
 
 /* --------------------------------- routes --------------------------------- */
-app.use('/',(req,res)=>{
-    res.send('Welcome to hotel api!')
-})
+// app.use('/',(req,res)=>{
+//     res.send('Welcome to hotel api!')
+// })
 
 
-app.use('/user', require('./src/routes/userRouter'))
+app.use('/users', require('./src/routes/userRouter'))
+app.use('/tokens', require('./src/routes/tokenRouter'))
+
+
+/* ------------------------------ error handler ----------------------------- */
+
+app.use(require('./src/middlewares/errorHandler'))
+
 
 //RUN
 app.listen(PORT, () => console.log('Server is running on:',PORT));
