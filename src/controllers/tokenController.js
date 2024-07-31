@@ -4,7 +4,7 @@
 /* -------------------------------------------------------------------------- */
 
 const { Token } = require("../models/tokenModel");
-const User = require("../models/userModel");
+const { User } = require("../models/userModel");
 
 module.exports.token = {
   list: async (req, res) => {
