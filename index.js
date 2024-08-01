@@ -27,6 +27,7 @@ app.all('/',(req,res)=>{
 
 app.use('/users', require('./src/routes/userRouter'))
 app.use('/tokens', require('./src/routes/tokenRouter'))
+app.use('/rooms', require('./src/routes/roomRouter') )
 
 
 /* ------------------------------ error handler ----------------------------- */
