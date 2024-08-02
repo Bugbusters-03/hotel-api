@@ -42,6 +42,11 @@ module.exports.room = {
     
     const data = await Room.findOne({ _id: req.params.roomId });
 
+    if(!data){
+      res.errorStatusCode = 404;
+      throw new Error('Room not Found!')
+    }
+
     res.status(200).send({
       error: false,
       message: "Room is listed!",
