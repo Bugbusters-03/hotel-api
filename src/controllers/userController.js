@@ -22,8 +22,8 @@ module.exports.user = {
     
       create: async (req, res) => {
     
-        const {username, email, password} = req.body
-        const data = await User.create({username, email, password:passwordEncrypt(password)});
+        const {username, email, password,isActive, isAdmin} = req.body
+        const data = await User.create({username, email, password:passwordEncrypt(password), isActive, isAdmin});
     
         res.status(201).send({
           error: false,
@@ -49,7 +49,7 @@ module.exports.user = {
     
       update: async (req, res) => {
 
-        const {username, email, password} = req.body
+        const {username, email, password,isActive, isAdmin} = req.body
     
         const userData = await User.findOne({_id:req.params?.userId});
         if(!userData){
@@ -57,7 +57,7 @@ module.exports.user = {
             throw new Error('User not found!')
         }
     
-        const data = await User.updateOne({ _id: req.params.userId }, {username, email, password:passwordEncrypt(password)});
+        const data = await User.updateOne({ _id: req.params.userId }, {username, email, password:passwordEncrypt(password),isActive, isAdmin});
     
         if(data?.modifiedCount < 1){
             res.errorStatusCode = 500;

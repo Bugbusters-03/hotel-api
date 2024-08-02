@@ -34,5 +34,5 @@
     Beyza   - user         -> model,controller,router
     Soner   - reservation  -> model,controller,router
     Omer    - room         -> model,controller,router
-    ibrahim - authentication,login,logout,token ve tablosu
+    ibrahim - authentication,login,logout,token ve tablosu,simple token ,jwt token
     * dbConnection -> herkes yapacak, conflict ciksin!
