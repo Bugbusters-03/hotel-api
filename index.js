@@ -32,6 +32,7 @@ app.use("/users", require("./src/routes/userRouter"));
 app.use("/tokens", require("./src/routes/tokenRouter"));
 app.use("/auth", require("./src/routes/authRouter"));
 app.use('/rooms', require('./src/routes/roomRouter') )
+app.use('/reservations', require('./src/routes/revervationRouter') )
 
 /* ------------------------------ error handler ----------------------------- */
 
@@ -39,3 +40,4 @@ app.use(require("./src/middlewares/errorHandler"));
 
 //RUN
 app.listen(PORT, () => console.log("Server is running on:", PORT));
+

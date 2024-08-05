@@ -24,8 +24,8 @@ module.exports.room = {
   // CRUD ->
 
   create: async (req, res) => {
-    const { roomNumber, image, bedType, price } = req.body;
-    const data = await Room.create({ roomNumber, image, bedType, price });
+    const { roomNumber, image, bedCount, price } = req.body;
+    const data = await Room.create(req.body);
 
     if (!data) {
       res.errorStatusCode = 500;
