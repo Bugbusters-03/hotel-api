@@ -16,12 +16,17 @@ const RoomSchema = new mongoose.Schema({
         required:true,
         unique: true
     },
-    bedType:{
-        type: String,
-        trim: true,
+    // bedType:{
+    //     type: String,
+    //     trim: true,
+    //     enum:['King','Family','Double', 'Single', 'Baby'],
+    //     default: 'Double'   
+    // },
+    bedCount:{
+        type: Number, 
         required: true,
-        enum:['Double', 'Single', 'Baby'],
-        default: 'Double'   
+        enum:[1,2,3,4,5],
+        default: 1   
     },
     price:{
         type: Number,
